@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #181924;
+  border-radius: 20px;
+  height: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #56574e;
+  transition: all 0.2s;
+}
+
+@layer components {
+  
+  .aside-item {
+    @apply uppercase h-14 hover:text-white hover:scale-105 duration-200  ;}
+    .aside-subitem{
+      @apply uppercase flex h-10 hover:text-white hover:scale-105 duration-200 text-[16px]
+    }
+    .aside-icon{
+      @apply mx-4 mr-5 text-white/50 group-hover:text-white ;
+      
+    }
+  
+}
