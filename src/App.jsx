@@ -1,17 +1,22 @@
-import routes from "./Routes"
-import TopBar from "./Components/TopBar/TopBar"
-import { useRoutes } from "react-router-dom"
-import Sidebar from "./Components/Sidebar/Sidebar"
+import routes from "./Routes";
+import TopBar from "./Components/TopBar/TopBar";
+import { useRoutes } from "react-router-dom";
+import Sidebar from "./Components/Sidebar/Sidebar";
 
 function App() {
-let router = useRoutes(routes)
+  let router = useRoutes(routes);
   return (
-    <>
-    <TopBar/>
-    <Sidebar/>
-     {router}
-    </>
-  )
+    <div className="select-none">
+      <TopBar />
+      <Sidebar />
+      <div className="flex">
+        <div className="nav-size"></div>
+        <div className="right-side ">
+          {router}
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

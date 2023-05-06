@@ -1,7 +1,11 @@
-// import React from 'react'
+import Features from "../../Components/Features/Features"
+import Widget from "../../Components/Widget/Widget"
 
 export default function HomePage() {
   return (
-    <div>HomePage why is this not working?</div>
+    <>
+      <Features></Features>
+      <Widget></Widget>
+    </>
   )
 }

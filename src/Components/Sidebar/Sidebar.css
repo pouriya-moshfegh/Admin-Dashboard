@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 8px;
 }
 
 /* Track */
@@ -13,14 +13,14 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #181924;
+  background: #0c0c13;
   border-radius: 20px;
-  height: 20px;
+  max-height: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #56574e;
+  background: #0c0c13ab;
   transition: all 0.2s;
 }
 
@@ -29,11 +29,16 @@
   .aside-item {
     @apply uppercase h-14 hover:text-white hover:scale-105 duration-200  ;}
     .aside-subitem{
-      @apply uppercase flex h-10 hover:text-white hover:scale-105 duration-200 text-[16px]
+      @apply uppercase flex h-10 hover:text-white hover:scale-105 duration-200 text-[16px];
     }
     .aside-icon{
       @apply mx-4 mr-5 text-white/50 group-hover:text-white ;
-      
+    }
+    .nav-size{
+      @apply md:w-[30%] lg:w-[27%] xl:w-[20%] h-screen ;
     }
   
+}
+.nav-shadow{
+  box-shadow: 2px 0 5px -2px #00000021;;
 }

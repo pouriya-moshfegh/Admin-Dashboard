@@ -9,4 +9,11 @@
   .flexc-center {
     @apply flex flex-col items-center;
   }
+  .right-side{
+    @apply mt-20 w-full md:w-[70%] lg:w-[73%] xl:w-[80%] bg-secondary text-[#fff] px-8 py-4 z-10 ;
+  }
+  .box-container{
+    @apply bg-primary mt-4 px-4 pt-6  w-full rounded-xl;
+  }
 }
+

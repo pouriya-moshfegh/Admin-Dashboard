@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .feature-box {
+    @apply h-40 w-[90%] sm:w-[79%] md:w-[48%] xl:w-[23%] mx-auto rounded-2xl p-4  drop-shadow hover:scale-105 duration-300;
+  }
+  .feature-box__title {
+    @apply tracking-wide text-white/90 text-lg mt-1 ;
+  }
+}
+.Reavanue {
+  background: rgb(133, 125, 204);
+  background: linear-gradient(
+    60deg,
+    rgb(124, 116, 202) 0%,
+    rgb(58, 38, 231) 100%
+  );
+}
+.sales {
+  background: rgb(82, 153, 224);
+  background: linear-gradient(
+    60deg,
+    rgba(82, 153, 224, 1) 0%,
+    rgb(37, 88, 226) 100%
+  );
+}
+.costs {
+  background: rgb(255, 81, 62);
+  background: linear-gradient(
+    60deg,
+    rgb(89, 207, 53) 0%,
+    rgb(25, 82, 13) 100%
+  );
+}
+.sessions {
+    background: rgb(214, 72, 56);
+    background: linear-gradient(42deg, rgb(202, 71, 71) 0%, rgb(185, 5, 5) 100%);
+}
+@media  only screen and (max-width:400px) {
+    .feature-box{
+        width: 90%;
+    }
+}
