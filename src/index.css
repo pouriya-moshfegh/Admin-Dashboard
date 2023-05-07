@@ -49,3 +49,15 @@
     background-color: #746d6d;
   transition: all 0.2s;
 }
+html::selection{
+  color:none;
+  background-color:none;
+  user-select: none;
+  }
+  input,
+  textarea,
+  button,
+  select,
+  a {
+      -webkit-tap-highlight-color: transparent;
+  }
