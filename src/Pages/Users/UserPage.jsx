@@ -1,5 +1,5 @@
 import Widget from "../../Components/Widget/Widget"
-import Userchart from "../../Components/UserChart/userChart"
+import UserChart from "../../Components/userChart/userChart"
 
 export default function UserPage() {
   return (
@@ -7,7 +7,7 @@ export default function UserPage() {
 
 <>
 <Widget/>
-<Userchart/>
+<UserChart/>
 </>
    
   )
