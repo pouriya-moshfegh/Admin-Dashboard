@@ -18,3 +18,21 @@
 .data-right p{
     @apply text-sm
 }}
+
+ .MuiDataGrid-withBorderColor{
+color:rgba(255, 255, 255, 0.664)
+}
+.css-6h1dhi-MuiDataGrid-root .MuiDataGrid-withBorderColor{
+    border: none;
+    background-color: rgba(240, 248, 255, 0.027);
+}
+.css-204u17-MuiDataGrid-main{
+    width: 100%;
+}
+.css-levciy-MuiTablePagination-displayedRows{
+color: white;
+}
+.MuiDataGrid-columnHeaders{
+    background-color:#1f1c1cb2 !important;
+    color: white;
+}

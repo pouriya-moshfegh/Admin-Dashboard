@@ -6,7 +6,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./topbar.css"
 import { Avatar } from "@mui/material";
 
+
 export default function TopBar() {
+  
   return (
     <>
       {/* top nav container */}
@@ -32,7 +34,7 @@ export default function TopBar() {
           {/* !right side ==> logo and avatar */}
           <div className="text-white flex flex-row-reverse items-center">
             {/* avatar */}
-            <Avatar sx={{ bgcolor: "f9f9f9"}}>N</Avatar>
+            <Avatar src="/public/image/profile/avatar-1.jpg" sx={{ bgcolor: "f9f9f9"}}>N</Avatar>
           {/* ============== */}
             {/* icons */}
             <Link>

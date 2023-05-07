@@ -13,25 +13,22 @@ export default function Features() {
     target: info.mainchart,
     name: "Traffic",
   });
-  console.log(mainChart.target)
- 
-  // ============
-  // line chart maker
+
+  // _____ line chart maker _______
   const reavanueLineChart = (information) => {
     return (
       <ResponsiveContainer>
         <LineChart width="100%" height={150} data={information}>
-          <Line  dataKey="uv" stroke="#000000bd" />
+          <Line dataKey="uv" stroke="#000000bd" />
         </LineChart>
       </ResponsiveContainer>
     );
   };
-  // ===========
-  // const titleChanger= (e)=>{
 
   // }
   return (
     <section className="flex flex-wrap gap-3 ">
+      {/* ==================   Reavanue  ================= */}
       <Link
         onClick={() => {
           setMainChart({ target: info.reavanue, name: "Reavanue" });
@@ -44,10 +41,10 @@ export default function Features() {
           &nbsp;)
         </h3>
         <h2 className="feature-box__title">Reavanue</h2>
-       {reavanueLineChart(info.reavanue)}
-     
+        {reavanueLineChart(info.reavanue)}
       </Link>
-      {/* ===================================== */}
+
+      {/* ===================  sales  ================= */}
       <Link
         onClick={() => {
           setMainChart({ target: info.sales, name: "sales" });
@@ -62,8 +59,8 @@ export default function Features() {
         <h2 className="feature-box__title ">Sales</h2>
         {reavanueLineChart(info.sales)}
       </Link>
-      {/* ===================================== */}
 
+      {/* =================    Costs  =================== */}
       <Link
         onClick={() => {
           setMainChart({ target: info.costs, name: "Costs" });
@@ -78,8 +75,8 @@ export default function Features() {
         <h2 className="feature-box__title ">Costs</h2>
         {reavanueLineChart(info.costs)}
       </Link>
-      {/* ===================================== */}
 
+      {/* =================   sessions ==================== */}
       <Link
         onClick={() => {
           setMainChart({ target: info.sessions, name: "sessions" });
@@ -94,10 +91,12 @@ export default function Features() {
         <h2 className="feature-box__title ">Sessions</h2>
         {reavanueLineChart(info.sessions)}
       </Link>
-      {/* =============================== */}
-      {/* Main chart */}
-      <div className="  h-[500px] box-container">
-        <div className="flex justify-between mb-4">
+
+
+      {/* _____________  Main chart box _______________*/}
+      <div className="h-[300px] sm:h-[400px] lg:h-[500px] box-container pb-12 sm:pb-4 ">
+        {/* main chart detail */}
+        <div className="flex justify-between mb-4 ">
           <div>
             <h2 className="text-2xl">{mainChart.name} </h2>
             <span className="text-sm text-white/80">
@@ -105,6 +104,7 @@ export default function Features() {
             </span>
           </div>
           <div>
+            {/* buttons of day and month */}
             <ButtonGroup
               variant="text"
               color="primary"
@@ -117,6 +117,7 @@ export default function Features() {
           </div>
         </div>
 
+        {/* _____  main chart ______ */}
         <MainChart infoData={mainChart.target}></MainChart>
       </div>
     </section>

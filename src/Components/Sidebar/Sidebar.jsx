@@ -21,78 +21,78 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:block fixed select-none top-0 left-0 nav-size bg-primary nav-shadow">
       <div className="h-20 w-full bg-secondary  sticky top-0 flex-center">
+        {/* ________ main title ________ */}
         <h2 className="text-white/90 uppercase  text-2xl"> agent advance</h2>
       </div>
-      <div className="h-full overflow-scroll  flex flex-col text-white/70">
+      <div className="h-full scroll-side overflow-scroll  flex flex-col text-white/70">
         <div>
-          {" "}
-          {/* ============================== */}
-          {/* title */}
-          <NavLink className="aside-item flex items-center text-xl ">
+          {/* ___________________ title (Dashboard)  _________________________ */}
+          <NavLink className="aside-item text-xl">
             <SpeedRoundedIcon className="relative  mx-4 text-[#3aaa53] " />
             Dashboard
           </NavLink>
-          {/* ====sub menu==== */}
+          {/* _________ sub menu ________ */}
           {/* home */}
-          <NavLink to="/"  className={`aside-subitem group`}>
+          <NavLink to="/" className={`aside-subitem group`}>
             <RoofingOutlinedIcon fontSize="small" className="aside-icon" />
             Home
           </NavLink>
+
           {/* anlytics */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <TimelineRoundedIcon fontSize="small" className="aside-icon" />
             analytics
           </NavLink>
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <TrendingUpRoundedIcon fontSize="small" className="aside-icon" />
             Sales
           </NavLink>
-          {/* ============================== */}
-          {/* title */}
-          <NavLink className="aside-item flex items-center text-lg mt-4">
+
+          {/* ___________________ title (Quick menu) _________________________ */}
+          <NavLink className="aside-item ">
             <ElectricBoltOutlinedIcon className="relative  mx-4 text-[yellow] " />
             Quick menu
           </NavLink>
-          {/* ====sub menu==== */}
+          {/* _________ sub menu ________ */}
           {/* users */}
-          <NavLink to="/users"  className={`aside-subitem group`}>
+          <NavLink to="/users" className={`aside-subitem group`}>
             <PermIdentityOutlinedIcon fontSize="small" className="aside-icon" />
             users
           </NavLink>
           {/* new user */}
-          <NavLink to="/newuser"  className={`aside-subitem group`}>
+          <NavLink to="/newuser" className={`aside-subitem group`}>
             <PermIdentityOutlinedIcon fontSize="small" className="aside-icon" />
             new user
           </NavLink>
           {/* products */}
-          <NavLink to="/products"  className={`aside-subitem group`}>
+          <NavLink to="/products" className={`aside-subitem group`}>
             <ShoppingCartOutlinedIcon fontSize="small" className="aside-icon" />
             products
           </NavLink>
           {/* tranactions */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <AttachMoneyOutlinedIcon fontSize="small" className="aside-icon" />
             tranactions
           </NavLink>
           {/* reports */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <BarChartOutlinedIcon fontSize="small" className="aside-icon" />
             reports
           </NavLink>
-          {/* ============================== */}
-          {/* Notifications */}
-          <NavLink className="aside-item flex items-center text-lg mt-4">
+
+          {/* ___________________ title (Notifications) _________________________ */}
+          <NavLink className="aside-item ">
             <NotificationsActiveOutlinedIcon className="relative  mx-4 text-red/90 " />
             Notifications
           </NavLink>
-          {/* ====sub menu==== */}
+          {/* _________ sub menu ________ */}
           {/* mail */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <EmailOutlinedIcon fontSize="small" className="aside-icon" />
             mail
           </NavLink>
           {/* feedbacks */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <ThumbUpOffAltOutlinedIcon
               fontSize="small"
               className="aside-icon"
@@ -100,19 +100,19 @@ export default function Sidebar() {
             feedbacks
           </NavLink>
           {/* messages */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <ChatOutlinedIcon fontSize="small" className="aside-icon" />
             messages
           </NavLink>
-          {/* ============================== */}
-          {/* title */}
-          <NavLink className="aside-item flex items-center text-lg mt-4">
+
+          {/* ___________________ title (staff) _________________________ */}
+          <NavLink className="aside-item ">
             <EngineeringOutlinedIcon className="relative  mx-4 text-[orange]/80 " />
             staff
           </NavLink>
-          {/* ====sub menu==== */}
+          {/* _________ sub menu ________ */}
           {/* mail */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <ManageAccountsOutlinedIcon
               fontSize="small"
               className="aside-icon"
@@ -120,7 +120,7 @@ export default function Sidebar() {
             manage
           </NavLink>
           {/* feedbacks */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <ThumbUpOffAltOutlinedIcon
               fontSize="small"
               className="aside-icon"
@@ -128,7 +128,7 @@ export default function Sidebar() {
             analytics
           </NavLink>
           {/* messages */}
-          <NavLink  className={`aside-subitem group`}>
+          <NavLink className={`aside-subitem group`}>
             <ErrorOutlineOutlinedIcon fontSize="small" className="aside-icon" />
             report
           </NavLink>

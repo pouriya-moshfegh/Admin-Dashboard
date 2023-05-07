@@ -2,24 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
+.scroll-side::-webkit-scrollbar {
   width: 8px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.scroll-side::-webkit-scrollbar-track {
   background: transparent;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.scroll-side::-webkit-scrollbar-thumb {
   background: #0c0c13;
-  border-radius: 20px;
+margin-top: 2px;
   max-height: 20px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.scroll-side::-webkit-scrollbar-thumb:hover {
   background: #0c0c13ab;
   transition: all 0.2s;
 }
@@ -27,7 +27,8 @@
 @layer components {
   
   .aside-item {
-    @apply uppercase h-14 hover:text-white hover:scale-105 duration-200  ;}
+    @apply uppercase h-14 hover:text-white hover:scale-105 duration-200 flex items-center text-lg mt-4;
+     ;}
     .aside-subitem{
       @apply uppercase flex h-10 hover:text-white hover:scale-105 duration-200 text-[16px];
     }

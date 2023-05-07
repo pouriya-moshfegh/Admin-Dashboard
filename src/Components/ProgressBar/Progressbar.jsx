@@ -1,6 +1,7 @@
 import ProgressBar from "@ramonak/react-progress-bar";
+import PropTypes from 'prop-types';
 
-export default function ProgressBarComp(props) {
+export default function ProgressBarComp({color,completed}) {
   const progressMaker = (color, size) => {
     return (
       <ProgressBar
@@ -14,7 +15,12 @@ export default function ProgressBarComp(props) {
     );
   };
   return (
-   <section className="progressContainer mt-[2px]">{progressMaker(props.color, props.completed)}
+    <section className="progressContainer mt-[2px]">
+      {progressMaker(color, completed)}
     </section>
   );
+}
+ProgressBarComp.propTypes = {
+  color: PropTypes.string.isRequired,
+  completed: PropTypes.number.isRequired
 }
