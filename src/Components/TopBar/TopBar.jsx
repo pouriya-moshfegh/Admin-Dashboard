@@ -19,7 +19,7 @@ export default function TopBar() {
           {/* menu icon and logo */}
           <div className="">
             {/* menu icon */}
-            <Link to="/" className="md:hidden"> 
+            <Link to="/dashboard" className="md:hidden"> 
               <MenuIcon className="md:hidden text-white absolute left-2 top-2 text-2xl" />
             </Link>
             {/* logo */}

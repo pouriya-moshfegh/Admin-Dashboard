@@ -10,7 +10,7 @@ import {daysData} from "./widgetData";
 import ProgressBarComp from "../ProgressBar/Progressbar";
 
 
-export default function Widget(props) {
+export default function Widget() {
 
   let [blue,green,yellow,red] = ["#5299e0","#519668","#FFFF2E","#DC2626"];
  
