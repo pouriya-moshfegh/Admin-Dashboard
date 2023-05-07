@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 
-export default function Userchart() {
+export default function UserChart() {
   // ___________ data  ___________
   const rows = [
     {

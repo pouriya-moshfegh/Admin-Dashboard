@@ -1,6 +1,6 @@
 import Features from "../../Components/Features/Features"
 import Widget from "../../Components/Widget/Widget"
-import UserChart from "../../Components/UserChart/UserChart"
+import UserChart from "../../Components/userChart/UserChart"
 export default function HomePage() {
   return (
     <>

@@ -1,5 +1,5 @@
 import Widget from "../../Components/Widget/Widget"
-import UserChart from "../../Components/UserChart/UserChart"
+import UserChart from "../../Components/userChart/UserChart"
 
 export default function UserPage() {
   return (
