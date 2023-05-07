@@ -24,7 +24,7 @@ export default function TopBar() {
             </Link>
             {/* logo */}
             <img
-              src="public/image/myLogo/logo-no-background.png"
+              src="./public/image/myLogo/logo-no-background.png"
               className="
             sm:w-[250px] w-1/2 sm:static absolute bottom-1 left-2"
               alt="logo image"
