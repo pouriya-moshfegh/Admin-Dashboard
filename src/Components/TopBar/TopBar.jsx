@@ -1,4 +1,5 @@
 import NotificationsRoundedIcon from "@mui/icons-material/NotificationsRounded";
+import logo from "../../../public/image/myLogo/logo-no-background.png"
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
 import { Link } from "react-router-dom";
@@ -24,7 +25,7 @@ export default function TopBar() {
             </Link>
             {/* logo */}
             <img
-              src="./public/image/myLogo/logo-no-background.png"
+              src={logo}
               className="
             sm:w-[250px] w-1/2 sm:static absolute bottom-1 left-2"
               alt="logo image"

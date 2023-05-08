@@ -7,6 +7,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 
 export default function UserChart() {
+
   // ___________ data  ___________
   const rows = [
     {
@@ -179,6 +180,7 @@ export default function UserChart() {
         <DataGrid
           className={`border-none mt-4`}
           rows={allRows}
+          sx={{color:"#fff"}}
           columns={columns}
           disableRowSelectionOnClick
           initialState={{
@@ -193,11 +195,7 @@ export default function UserChart() {
       </div>
       {/* ______________________ */}
       {/* Modal */}
-      <Dialog
-        open={open}
-        keepMounted
-        onClose={handleClose}
-      >
+      <Dialog open={open} keepMounted onClose={handleClose}>
         <div className="h-40 w-50 bg-secondary text-white pt-8 p-4">
           <h2 className="font-bold  text-xl">
             Are You sure you want to delete the user?
