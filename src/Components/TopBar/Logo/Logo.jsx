@@ -10,7 +10,7 @@ export default function Logo() {
     <div className="">
       {/* menu icon */}
       <Link to="/dashboard" className="md:hidden">
-        <MenuIcon className="md:hidden text-white absolute left-2 top-2 text-2xl" />
+        <MenuIcon  sx={{ fontSize: 30 }} className="md:hidden dark:text-secondary text-white absolute left-2 top-2 text-2xl" />
       </Link>
       {/* logo */}
       {!contextData.isSearchOpen && (
