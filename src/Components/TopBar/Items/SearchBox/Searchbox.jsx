@@ -24,7 +24,7 @@ contextData.setIsSearchOpen(false);
       className="relative"
     >
       <SearchIcon
-        sx={{ fontSize: 30 }}
+        sx={{ fontSize: 28 }}
         className={contextData.isSearchOpen ? "icon-deactive" : "icon-active"}
         onClick={searchBoxOpener}
       />
