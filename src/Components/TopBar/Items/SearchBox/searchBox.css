@@ -3,13 +3,13 @@
 @tailwind utilities;
 @layer components{
   .icon-deactive{
-    @apply cursor-pointer absolute duration-300 left-[3px] top-[7px] z-20 dark:text-white/90;
+    @apply cursor-pointer absolute duration-300 left-[3px] top-[2px] xsm:top-[7px] z-20 dark:text-white/90;
   }
   .icon-active{
     @apply hover:scale-105 cursor-pointer m-1 duration-300 ;
 }
   .search-deactive{
-    @apply outline-none bg-secondary dark:bg-primary py-2 xsm:w-auto px-8 rounded-lg duration-300 relative top-[2px] right-0 text-sm;
+    @apply outline-none bg-secondary dark:bg-primary py-2 xsm:w-auto px-8 rounded-lg duration-300 relative  top-[2px] right-0 text-sm;
 }
   .search-active{
     @apply w-0 duration-300 bg-primary;
