@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class',
   theme: {
     colors: {
       primary: "#2a2b36",
@@ -18,7 +19,7 @@ export default {
       lg:"1024px",
       xl:"1280px"
     },
-    extend: {},
+ 
     fontFamily: {
       sans: ["Jost", "Frank Ruhl Libre"],
     },

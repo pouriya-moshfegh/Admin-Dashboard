@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+  html{
+    @apply text-[80%] xsm:text-[90%] sm:text-[95%] bg-secondary dark:bg-white
+  }
+
+}
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flexc-center {
+    @apply flex flex-col items-center;
+  }
+  .right-side {
+    @apply mt-20 w-full md:w-[70%] lg:w-[73%] xl:w-[80%] bg-secondary dark:bg-white text-[#fff] px-8 py-4 z-10;
+  }
+  .box-container {
+    @apply bg-primary dark:bg-primary mt-4 px-4 pt-6  w-full rounded-xl pb-4;
+  }
+  .text-bold{
+    @apply mt-1 font-bold lg:text-lg;
+  }
+}
+
+
+html::selection{
+  color:none;
+  background-color:none;
+  user-select: none;
+  }
+  input,
+  textarea,
+  button,
+  select,
+  a,svg {
+      -webkit-tap-highlight-color: transparent;
+  }

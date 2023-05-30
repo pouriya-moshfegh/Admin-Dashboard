@@ -1,3 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    .topbar{
+    @apply text-[80%] xsm:text-[90%] sm:text-[95%] bg-secondary
+  }
+    .scale-icon{
+    @apply m-1 hover:scale-110 cursor-pointer
+  }
+}
+
+
 .topbar-shadow {
 box-shadow: 1px 1px 20px  #00000038;
 }

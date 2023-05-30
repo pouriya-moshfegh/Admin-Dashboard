@@ -2,7 +2,7 @@ import "./features.css";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { LineChart, Line, ResponsiveContainer } from "recharts";
-import info from "./pageData";
+import info from "../../data/pageData";
 import MainChart from "../Chart/MainChart";
 import { Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -27,7 +27,7 @@ export default function Features() {
 
   // }
   return (
-    <section className="flex flex-wrap gap-3 ">
+    <section className="flex flex-wrap gap-3  ">
       {/* ==================   Reavanue  ================= */}
       <Link
         onClick={() => {

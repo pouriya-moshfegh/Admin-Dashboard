@@ -19,11 +19,11 @@ import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 export default function SideBaritems() {
   return (
     <>
-      <div className=" h-20 w-full bg-secondary  sticky top-0 flex-center ">
+      <div className=" h-20 w-full bg-secondary dark:bg-[#f8f8f8] dark:border-r sticky top-0 flex-center ">
         {/* ________ main title ________ */}
-        <h2 className="text-white/90 uppercase  text-2xl"> agent advance</h2>
+        <h2 className="text-white/90 dark:text-primary uppercase  text-2xl"> agent advance</h2>
       </div>
-      <div className="h-full scroll-side md:overflow-scroll  flex flex-col text-white/70">
+      <div className="h-full scroll-side md:overflow-scroll dark:bg-white dark:text-secondary flex flex-col text-white/70">
         <div>
           {/* ___________________ title (Dashboard)  _________________________ */}
           <NavLink className="aside-item text-xl">

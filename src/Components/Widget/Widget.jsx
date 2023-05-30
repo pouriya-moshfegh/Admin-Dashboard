@@ -1,4 +1,3 @@
-
 import "./widget.css";
 import FaceIcon from "@mui/icons-material/Face";
 import Face4Icon from "@mui/icons-material/Face4";
@@ -6,19 +5,17 @@ import GoogleIcon from "@mui/icons-material/Google";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-import {daysData} from "./widgetData";
+import { daysData } from "../../data/widgetData";
 import ProgressBarComp from "../ProgressBar/Progressbar";
 
-
 export default function Widget() {
+  let [blue, green, yellow, red] = ["#5299e0", "#519668", "#FFFF2E", "#DC2626"];
 
-  let [blue,green,yellow,red] = ["#5299e0","#519668","#FFFF2E","#DC2626"];
- 
   return (
     <section className="box-container ">
       {/* title */}
       <h2 className="text-xl">Traffic & Sales </h2>
-      <hr className="text-secondary/50 mt-2" />
+      <hr className="text-secondary/50 dark:text-secondary mt-2" />
       {/* _________ progressbar parts __________ */}
       <div className="flex flex-col sm:flex-row gap-4 mt-4 border-b border-secondary/50 pb-2">
         {/* ________  left side(days of week)   _________ */}
