@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import { DataGrid } from "@mui/x-data-grid";
-import DeletModal from "../Modal/DeletModal";
 import EditIcon from "@mui/icons-material/Edit";
+import DeleteModal from "../Modal/DeleteModal";
+import EditModal from "../Modal/EditModal";
 
-export default function Commetns() {
+
+export default function Comments() {
 
   // ___________ states  ___________
   const [targetItem, setTargetItem] = useState("");
   const [rows, setRows] = useState([]);
-  const [open, setOpen] = useState(false);
+  const [openDeleteMdoal, setOpenDeleteModal] = useState(false);
+  const [openEditModal, setOpenEditModal] = useState(false);
+  // ___________ data grid setting  ___________
 
   const columns = [
     {
@@ -55,7 +59,7 @@ export default function Commetns() {
           <div>
             <button
               onClick={() => {
-                handleOpen();
+                handleOpenDelModal();
                 setTargetItem(params.row.id);
               }}
             >
@@ -64,7 +68,7 @@ export default function Commetns() {
             <button
               className="mx-4"
               onClick={() => {
-                handleOpen();
+                handleOpenEditModal()
                 setTargetItem(params.row.id);
               }}
             >
@@ -76,18 +80,21 @@ export default function Commetns() {
     },
   ];
 
-  // ___________ data  ___________
+  // ___________ data api  ___________
   const getProdcuts = useEffect(() => {
     fetch("http://localhost:8000/api/comments")
       .then((res) => res.json())
       .then((res) => setRows(res));
   }, []);
-  const commentDeleteApi = fetch(
+  const commentDeleteApi =async()=>{ 
+    const fetchaApi = fetch(
     `http://localhost:8000/api/comments/${targetItem.toString()}`,
     {
       method: "DELETE",
     }
   ).then((res) => console.log(res));
+  return fetchaApi
+}
 
   // ___________ functions  ___________
   const commentDeleteDom = () => {
@@ -98,15 +105,18 @@ export default function Commetns() {
     );
   };
   const handleClose = () => {
-    setOpen(false);
+    setOpenDeleteModal(false);
+    setOpenEditModal(false)
   };
-  const handleOpen = () => {
-    setOpen(true);
+  const handleOpenDelModal = () => {
+    setOpenDeleteModal(true);
   };
-  
+  const handleOpenEditModal = () => {
+    setOpenEditModal(true);
+  };
+console.log("done")
 
-
-  return (
+ return (
     <section className="box-container">
       <div className="mx-auto border-none">
         <h1 className="text-2xl">Comments</h1>
@@ -126,8 +136,17 @@ export default function Commetns() {
         />
       </div>
       {/* ___________ delete Modal  ___________ */}
-      <DeletModal
-        open={open}
+      <DeleteModal
+        open={openDeleteMdoal}
+        handleClose={handleClose}
+        targetItem={targetItem}
+        targetDelete={commentDeleteDom}
+        fetchFunc={commentDeleteApi}
+      />
+      
+      {/* ___________ EditModal Modal  ___________ */}
+      <EditModal
+        open={openEditModal}
         handleClose={handleClose}
         targetItem={targetItem}
         targetDelete={commentDeleteDom}

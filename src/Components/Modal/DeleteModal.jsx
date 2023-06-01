@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 
-export default function DeletModal({
+export default function DeleteModal({
   open,
   handleClose,
   targetDelete,
@@ -26,10 +26,9 @@ export default function DeletModal({
           variant="contained"
           color="error"
           onClick={() => {
+            fetchFunc()
             handleClose();
             targetDelete();
-            fetchFunc
-           
           }}
         >
           Delete

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import { Avatar } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import DeleteModal from "../Modal/DeletModal";
+import DeleteModal from "../Modal/DeleteModal";
 
 export default function ProductsBox() {
   // ___________ states  ___________
@@ -17,12 +17,11 @@ export default function ProductsBox() {
       .then((res) => setRows(res));
   }, []);
 
-  const DeleteProductsApi = fetch(
-    `http://localhost:8000/api/products/${targetItem.toString()}`,
-    {
+  const DeleteProductsApi = () => {
+    fetch(`http://localhost:8000/api/products/${targetItem.toString()}`, {
       method: "DELETE",
-    }
-  ).then((res) => console.log(res));
+    }).then((res) => console.log(res));
+  };
   // ___________ data grid  ___________
 
   const columns = [
