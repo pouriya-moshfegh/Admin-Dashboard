@@ -1,46 +1,30 @@
+import { useState, useEffect } from "react";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import { Avatar } from "@mui/material";
-import { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
+import DeleteModal from "../Modal/DeletModal";
 
+export default function ProductsBox() {
+  // ___________ states  ___________
+  const [open, setOpen] = useState(false);
+  const [targetItem, setTargetItem] = useState("");
+  const [rows, setRows] = useState([]);
 
-export default function ProductChart() {
-  // ___________ data  ___________
-  const rows = [
+  // ___________ data api  ___________
+  const getProdcutsApi = useEffect(() => {
+    fetch("http://localhost:8000/api/products")
+      .then((res) => res.json())
+      .then((res) => setRows(res));
+  }, []);
+
+  const DeleteProductsApi = fetch(
+    `http://localhost:8000/api/products/${targetItem.toString()}`,
     {
-      id: 1,
-      title: "dell",
-      price: 353,
-      avatar: "/public/image/products/dell.png",
-    },
-    {
-      id: 2,
-      title: "mac",
-      price: 425,
-      avatar: "/public/image/products/mac.jpg",
-    },
-    {
-      id: 3,
-      title: "lenovo",
-      price: 450,
-      avatar: "",
-    },
-    {
-      id: 4,
-      title: "asus",
-      price: 160,
-      avatar: "/public/image/products/asus.png",
-    },
-    {
-      id: 5,
-      title: "Samsung",
-      price: 220,
-      avatar: null,
-    },
-  ];
+      method: "DELETE",
+    }
+  ).then((res) => console.log(res));
+  // ___________ data grid  ___________
+
   const columns = [
     {
       field: "id",
@@ -58,7 +42,7 @@ export default function ProductChart() {
       renderCell: (params) => {
         return (
           <div>
-            <Avatar src={params.row.avatar} sx={{ bgcolor: "#5299e0" }}>
+            <Avatar src={params.row.img} sx={{ bgcolor: "#5299e0" }}>
               {params.row.firstName && params.row.firstName.split("")[0]}
             </Avatar>
           </div>
@@ -79,8 +63,9 @@ export default function ProductChart() {
       width: 100,
       editable: true,
       headerClassName: " text-white font-bold",
-      renderCell:(params)=>{
-        return( `${params.row.price} $`)}
+      renderCell: (params) => {
+        return `${params.row.price} $`;
+      },
     },
     {
       field: "Edit",
@@ -107,8 +92,8 @@ export default function ProductChart() {
   ];
 
   // ___________ functions  ___________
-  const productDelete = () => {
-    setAllRows((pervRows) =>
+  const deleteProductDom = () => {
+    setRows((pervRows) =>
       pervRows.filter((eachrow) => {
         return eachrow.id !== targetItem;
       })
@@ -121,18 +106,14 @@ export default function ProductChart() {
     setOpen(true);
   };
 
-  // ___________ states  ___________
-  const [open, setOpen] = useState(false);
-  const [targetItem, setTargetItem] = useState();
-  const [allRows, setAllRows] = useState(rows);
-
   return (
     <section className="box-container">
+      {/* ___________  Data grid   ___________ */}
       <div className="mx-auto border-none">
         <h1 className="text-2xl">Products</h1>
         <DataGrid
           className={`border-none mt-4`}
-          rows={allRows}
+          rows={rows}
           columns={columns}
           disableRowSelectionOnClick
           initialState={{
@@ -145,30 +126,15 @@ export default function ProductChart() {
           pageSizeOptions={[5]}
         />
       </div>
-      {/* ______________________ */}
-      {/* Modal */}
-      <Dialog open={open} keepMounted onClose={handleClose}>
-        <div className="h-40 w-50 bg-secondary text-white pt-8 p-4">
-          <h2 className="font-bold  text-xl">
-            Are You sure you want to delete the Products?
-          </h2>
-        </div>
-        <DialogActions className="bg-secondary/90">
-          <Button variant="contained" color="success" onClick={handleClose}>
-            Ignore
-          </Button>
-          <Button
-            variant="contained"
-            color="error"
-            onClick={() => {
-              handleClose();
-              productDelete();
-            }}
-          >
-            Delete
-          </Button>
-        </DialogActions>
-      </Dialog>
+
+      {/* ___________  Modal   ___________ */}
+      <DeleteModal
+        open={open}
+        handleClose={handleClose}
+        targetItem={targetItem}
+        targetDelete={deleteProductDom}
+        fetchFunc={DeleteProductsApi}
+      />
     </section>
   );
 }

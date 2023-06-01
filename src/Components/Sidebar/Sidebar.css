@@ -30,7 +30,7 @@ margin-top: 2px;
     @apply uppercase h-14 mb-2 md:mb-0 bg-white/10 md:bg-primary/0 hover:text-white hover:dark:text-[#000]/90 hover:scale-105 duration-200 flex items-center text-2xl md:text-lg mt-4 justify-center md:justify-normal ;
      ;}
     .aside-subitem{
-      @apply uppercase w-1/2 md:w-full mx-auto flex  md:justify-normal h-10 hover:text-white hover:dark:text-[#000]/90 hover:scale-105 duration-200 text-lg md:text-[16px];
+      @apply uppercase w-1/2 md:w-full mx-auto flex  md:justify-normal h-9 hover:text-white hover:dark:text-[#000]/90 hover:scale-105 duration-200 text-lg md:text-[18px];
     }
     .aside-icon{
       @apply mx-4 mr-5 text-white/50 dark:text-[#000]/50 group-hover:text-white 

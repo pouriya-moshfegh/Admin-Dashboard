@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { daysData } from "../../data/widgetData";
 import ProgressBarComp from "../ProgressBar/Progressbar";
 
-export default function Widget() {
+export default function TrafficSales() {
   let [blue, green, yellow, red] = ["#5299e0", "#519668", "#FFFF2E", "#DC2626"];
 
   return (

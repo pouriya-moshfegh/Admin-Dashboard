@@ -8,7 +8,7 @@ export default function RightMenu() {
     <div className="text-white dark:text-secondary flex flex-row-reverse items-center">
       {/* _______ avatar ______ */}
       <Avatar
-        src="/public/image/profile/avatar-1.jpg"
+        src="/image/profile/avatar-1.jpg"
         sx={{ bgcolor: "f9f9f9" }}
       />
       {/* ______ icons   _____ */}

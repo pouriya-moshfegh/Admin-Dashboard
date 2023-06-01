@@ -16,7 +16,7 @@ import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
 import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 
-export default function SideBaritems() {
+export default function SidebarItems() {
   return (
     <>
       <div className=" h-20 w-full bg-secondary dark:bg-[#f8f8f8] dark:border-r sticky top-0 flex-center ">
@@ -58,11 +58,6 @@ export default function SideBaritems() {
             <PermIdentityOutlinedIcon fontSize="small" className="aside-icon" />
             users
           </NavLink>
-          {/* new user */}
-          <NavLink to="/newuser" className={`aside-subitem group`}>
-            <PermIdentityOutlinedIcon fontSize="small" className="aside-icon" />
-            new user
-          </NavLink>
           {/* products */}
           <NavLink to="/products" className={`aside-subitem group`}>
             <ShoppingCartOutlinedIcon fontSize="small" className="aside-icon" />
@@ -99,7 +94,7 @@ export default function SideBaritems() {
             feedbacks
           </NavLink>
           {/* messages */}
-          <NavLink className={`aside-subitem group`}>
+          <NavLink to="/comments"  className={`aside-subitem group`}>
             <ChatOutlinedIcon fontSize="small" className="aside-icon" />
             messages
           </NavLink>
