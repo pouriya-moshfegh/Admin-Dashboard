@@ -1,4 +1,4 @@
-🚀 Check out our latest project - an Admin Dashboard built with React, Tailwind CSS, and Material-UI! 🎨💻🚀
+🚀 Check out our latest project - an Admin Dashboard built with React, Tailwind CSS, and Material-UI!   🎨💻🚀
 
 🔊 And the best part? It comes with a built-in AI voice assistant, powered by natural language processing, to make managing your dashboard even easier! 🤖🎙️
 
