@@ -69,6 +69,7 @@ export default function Comments() {
               className="mx-4"
               onClick={() => {
                 handleOpenEditModal()
+                console.log(params.row.body)
                 setTargetItem(params.row.id);
               }}
             >
@@ -114,7 +115,7 @@ export default function Comments() {
   const handleOpenEditModal = () => {
     setOpenEditModal(true);
   };
-console.log("done")
+
 
  return (
     <section className="box-container">
@@ -149,7 +150,7 @@ console.log("done")
         open={openEditModal}
         handleClose={handleClose}
         targetItem={targetItem}
-        targetDelete={commentDeleteDom}
+        targetEdit={commentDeleteDom}
         fetchFunc={commentDeleteApi}
       />
     </section>

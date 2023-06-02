@@ -38,11 +38,11 @@ export default function SidebarItems() {
           </NavLink>
 
           {/* anlytics */}
-          <NavLink className={`aside-subitem group`}>
+          <NavLink to="/analytics" className={`aside-subitem group`}>
             <TimelineRoundedIcon fontSize="small" className="aside-icon" />
             analytics
           </NavLink>
-          <NavLink className={`aside-subitem group`}>
+          <NavLink  to="/sales" className={`aside-subitem group`}>
             <TrendingUpRoundedIcon fontSize="small" className="aside-icon" />
             Sales
           </NavLink>

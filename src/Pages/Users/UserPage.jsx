@@ -4,8 +4,8 @@ import UserChart from "../../Components/userChart/UserChart";
 export default function UserPage() {
   return (
     <>
-      <TrafficSales />
       <UserChart />
+      <TrafficSales />
     </>
   );
 }
