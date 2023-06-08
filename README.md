@@ -1,7 +1,7 @@
 ## 🚀 Admin dashboard with ai assistant
 
 
-link of the project:
+ <h1 align={center} > link of the project: </h1>
 https://admin-dashboard-steel-chi.vercel.app/
 
 ## 🎨 Design
@@ -37,5 +37,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 For any inquiries or feedback, please contact us at [pouriya.moshfeghsamie@gmail.com](mailto:pouriya.moshfeghsamie@gmail.com).
 
-👨‍🍳 Happy dining!
 
