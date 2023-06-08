@@ -3,11 +3,12 @@
 
  <div align="center" > <h2  > link of the project: </h2> </div>
   <div align="center" >  https://admin-dashboard-steel-chi.vercel.app/ </div>
+  <br/> <br/>
 
 
 ## 🎨 Design
 
-. It  includes responsive design features, ensuring that the website looks great on any device. It will be changed by theme color according to the user selection!
+ It  includes responsive design features, ensuring that the website looks great on any device. It will be changed by theme color according to the user selection!
  
  ## 🤖 Ai voice assitant
  can perform a variety of tasks such as :
