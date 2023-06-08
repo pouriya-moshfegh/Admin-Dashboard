@@ -5,7 +5,8 @@
   <div align="center" >  https://admin-dashboard-steel-chi.vercel.app/ </div>
   <br/> <br/>
   
-  <a href="https://admin-dashboard-steel-chi.vercel.app/ ">![Admin-dashboard](https://github.com/pouriya-moshfegh/Admin-Dashboard/assets/122268149/b839eeda-1239-490b-bb7d-075491c9ffdd)
+  <a href="https://admin-dashboard-steel-chi.vercel.app/ ">![Admin-dashboard-2](https://github.com/pouriya-moshfegh/Admin-Dashboard/assets/122268149/d8e77765-09a0-405e-ab3e-640fe8929f00)
+
  </a>
 
 
