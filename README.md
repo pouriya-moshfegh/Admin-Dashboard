@@ -1,7 +1,7 @@
 ## 🚀 Admin dashboard with ai assistant
 
 
- <h1 align={center} > link of the project: </h1>
+ <div align={center} > <h2  > link of the project: </h2> </div>
 https://admin-dashboard-steel-chi.vercel.app/
 
 ## 🎨 Design
