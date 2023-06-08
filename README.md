@@ -2,7 +2,7 @@
 
 
  <div align="center" > <h2  > link of the project: </h2> </div>
-  <div align="center" > <a  > https://admin-dashboard-steel-chi.vercel.app/ </a> </div>
+  <div align="center" >  https://admin-dashboard-steel-chi.vercel.app/ </div>
 
 
 ## 🎨 Design
