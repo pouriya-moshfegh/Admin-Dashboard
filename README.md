@@ -4,6 +4,9 @@
  <div align="center" > <h2  > link of the project: </h2> </div>
   <div align="center" >  https://admin-dashboard-steel-chi.vercel.app/ </div>
   <br/> <br/>
+  
+  <a href="https://admin-dashboard-steel-chi.vercel.app/ ">![Admin-dashboard](https://github.com/pouriya-moshfegh/Admin-Dashboard/assets/122268149/b839eeda-1239-490b-bb7d-075491c9ffdd)
+ </a>
 
 
 ## 🎨 Design
